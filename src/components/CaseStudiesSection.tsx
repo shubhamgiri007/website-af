@@ -28,8 +28,18 @@ const cases = [
 
 const CaseStudiesSection = () => {
   return (
-    <section id="case-studies" className="bg-section-light py-20 lg:py-28">
+    <section id="resources" className="bg-section-light py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Top headline and body */}
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl lg:text-4xl font-extrabold text-primary mb-4">
+            Lead the next era of supply chain planning.
+          </h2>
+          <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+            Download our exclusive framework: From Reactive to Predictive: The 2026 Guide to Demand Sensing and AI.
+          </p>
+        </div>
+
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
           <div>
             <div className="text-sm font-bold text-navy mb-1">Proven Results</div>

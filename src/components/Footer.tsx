@@ -1,4 +1,5 @@
-import { BarChart2, Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Youtube } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -8,10 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 text-navy font-bold text-lg mb-3">
-              <div className="w-7 h-7 bg-primary rounded-md flex items-center justify-center">
-                <BarChart2 className="w-4 h-4 text-primary-foreground" />
-              </div>
-              Analytical Factor
+              <img src={logo} alt="Analytical Factor" className="h-8 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               Empowering supply chain leaders with precision analytics and forecasting excellence.
@@ -22,9 +20,14 @@ const Footer = () => {
           <div>
             <div className="text-sm font-bold text-navy mb-4">Solutions</div>
             <ul className="space-y-2.5">
-              {["Demand Planning EER", "Forecast Diagnostics", "Health Reviews", "Consulting Services"].map((link) => (
+              <li>
+                <a href="/demand-planning-eer" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-2">
+                  Demand Planning EER
+                </a>
+              </li>
+              {["Trade Promotion Planning (TPP)", "Health Reviews", "Consulting Services"].map((link) => (
                 <li key={link}>
-                  <a href="#solutions" className="text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-2">
+                  <a href="/#solutions" className="text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-2">
                     {link}
                   </a>
                 </li>
@@ -37,10 +40,9 @@ const Footer = () => {
             <div className="text-sm font-bold text-navy mb-4">Company</div>
             <ul className="space-y-2.5">
               {[
-                { label: "About Us", href: "#who-we-are" },
-                { label: "Case Studies", href: "#case-studies" },
-                { label: "Resources & Blog", href: "#resources" },
-                { label: "Contact", href: "#contact" },
+                { label: "About Us", href: "/#who-we-are" },
+                { label: "Resources & Blog", href: "/#resources" },
+                { label: "Contact", href: "/#contact" },
               ].map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-2">
@@ -57,14 +59,14 @@ const Footer = () => {
             © 2024 Analytical Factor. All rights reserved.
           </div>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors underline underline-offset-2">Privacy Policy</a>
-            <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors underline underline-offset-2">Terms of Service</a>
+            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-primary transition-colors underline underline-offset-2">Privacy Policy</a>
+            <a href="/terms-of-service" target="_blank" rel="noopener noreferrer" className="text-xs text-muted-foreground hover:text-primary transition-colors underline underline-offset-2">Terms of Service</a>
             <div className="flex items-center gap-2 ml-2">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/company/analytical-factor/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="w-4 h-4" />
+              <a href="https://www.youtube.com/@analyticalfactorllc9397" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <Youtube className="w-4 h-4" />
               </a>
             </div>
           </div>

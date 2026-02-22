@@ -26,7 +26,7 @@ const reasons = [
 
 const WhySection = () => {
   return (
-    <section id="who-we-are" className="bg-card py-20 lg:py-28">
+    <section id="why-us" className="bg-card py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left */}

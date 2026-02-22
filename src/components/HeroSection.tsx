@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { ArrowRight, ChevronRight } from "lucide-react";
+import heroSectionImage from "../assets/hero-section.png";
 
 const slides = [
   {
@@ -18,95 +19,6 @@ const slides = [
     body: "A team with extensive knowledge and experience of translating business requirements, constraints, trends and business drivers into a comprehensive analytical solution.",
   },
 ];
-
-const DashboardMockup = () => (
-  <div className="relative w-full max-w-xl ml-auto">
-    <div className="bg-card rounded-2xl shadow-[0_20px_60px_-10px_hsl(217_91%_50%/0.2)] border border-border overflow-hidden">
-      <div className="bg-navy px-4 py-3 flex items-center gap-3">
-        <div className="flex gap-1.5">
-          <div className="w-3 h-3 rounded-full bg-red-400/80" />
-          <div className="w-3 h-3 rounded-full bg-yellow-400/80" />
-          <div className="w-3 h-3 rounded-full bg-green-400/80" />
-        </div>
-        <div className="flex-1 bg-navy-mid rounded-md px-3 py-1 text-xs text-muted-foreground">
-          Modern Data Analytics
-        </div>
-      </div>
-
-      <div className="p-4 flex gap-3">
-        <div className="w-28 flex-shrink-0 space-y-1">
-          <div className="bg-primary/10 rounded-md px-2 py-1.5 text-xs font-medium text-primary">Predictive</div>
-          {["Forecast", "Inventory", "Sales", "Demand", "Anomaly"].map((item) => (
-            <div key={item} className="px-2 py-1.5 text-xs text-muted-foreground">
-              {item}
-            </div>
-          ))}
-        </div>
-
-        <div className="flex-1 space-y-3">
-          <div className="bg-secondary/50 rounded-lg p-3">
-            <div className="text-xs font-semibold text-foreground mb-2">Bias Prediction</div>
-            <div className="flex items-end gap-1 h-16">
-              {[40, 65, 45, 80, 55, 90, 70, 85, 60, 95, 75, 88].map((h, i) => (
-                <div
-                  key={i}
-                  className={`flex-1 rounded-sm ${i % 3 === 0 ? "bg-primary" : i % 3 === 1 ? "bg-primary/50" : "bg-primary/30"}`}
-                  style={{ height: `${h}%` }}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-2">
-            {[
-              { label: "Forecast Acc.", value: "94.2%", up: true },
-              { label: "Bias Score", value: "−1.3%", up: true },
-              { label: "MAPE", value: "5.8%", up: false },
-              { label: "Service Lvl", value: "98.5%", up: true },
-            ].map((m) => (
-              <div key={m.label} className="bg-secondary/40 rounded-lg p-2">
-                <div className="text-xs text-muted-foreground">{m.label}</div>
-                <div className={`text-sm font-bold ${m.up ? "text-primary" : "text-accent-brand"}`}>{m.value}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-secondary/50 rounded-lg p-3">
-            <div className="text-xs font-semibold text-foreground mb-2">Demand Trend</div>
-            <svg viewBox="0 0 200 50" className="w-full h-10">
-              <defs>
-                <linearGradient id="heroGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="hsl(217, 91%, 50%)" />
-                  <stop offset="100%" stopColor="hsl(217, 91%, 50%)" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              <polyline
-                points="0,40 20,32 40,35 60,20 80,25 100,15 120,18 140,10 160,14 180,8 200,5"
-                fill="none"
-                stroke="hsl(217, 91%, 50%)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div className="absolute -bottom-4 -left-4 bg-card rounded-xl shadow-card-hover border border-border px-4 py-3 flex items-center gap-3">
-      <div className="w-9 h-9 bg-green-100 rounded-lg flex items-center justify-center">
-        <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      </div>
-      <div>
-        <div className="text-xs text-muted-foreground">Accuracy Improved</div>
-        <div className="text-sm font-bold text-navy">+18.4%</div>
-      </div>
-    </div>
-  </div>
-);
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
@@ -209,7 +121,14 @@ const HeroSection = () => {
           </div>
 
           <div className="relative lg:pl-6 pb-8">
-            <DashboardMockup />
+            <div className="relative w-full max-w-6xl ml-auto perspective-1000">
+              <img 
+                src={heroSectionImage} 
+                alt="Modern Data Analytics Dashboard" 
+                className="w-[140%] h-auto rounded-2xl shadow-[0_20px_60px_-10px_hsl(217_91%_50%/0.2),0_30px_90px_-20px_hsl(217_91%_30%/0.3),0_10px_30px_-5px_rgba(0,0,0,0.1)] hover:scale-[1.02] transition-transform duration-300 ease-out"
+                style={{ transform: 'perspective(1000px) rotateY(-2deg) rotateX(1deg) scale(1.15)' }}
+              />
+            </div>
           </div>
         </div>
       </div>

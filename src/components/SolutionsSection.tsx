@@ -10,7 +10,7 @@ const solutions = [
   },
   {
     icon: Activity,
-    title: "Advanced Diagnostics",
+    title: "Trade Promotion Planning (TPP)",
     description:
       "Deep-dive analytics to identify root causes of forecast error and supply chain inefficiency.",
     bullets: ["Identify bias patterns", "Statistical error decomposition"],
@@ -57,7 +57,9 @@ const SolutionsSection = () => {
                   ))}
                 </ul>
                 <a
-                  href="#contact"
+                  href={sol.title === "Demand Planning EER" ? "/demand-planning-eer" : "#contact"}
+                  target={sol.title === "Demand Planning EER" ? "_blank" : undefined}
+                  rel={sol.title === "Demand Planning EER" ? "noopener noreferrer" : undefined}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-brand hover:gap-2.5 transition-all"
                 >
                   Learn More <ArrowRight className="w-3.5 h-3.5" />

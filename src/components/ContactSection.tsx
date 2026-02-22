@@ -21,7 +21,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-sm font-bold text-navy">Email Us</div>
-                  <div className="text-sm text-muted-foreground">hello@analyticalfactor.com</div>
+                  <a href="mailto:info@analyticalfactor.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@analyticalfactor.com</a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -71,7 +71,7 @@ const ContactSection = () => {
               <select className="w-full border border-border rounded-lg px-3 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-background appearance-none cursor-pointer">
                 <option>General Inquiry</option>
                 <option>Demand Planning EER</option>
-                <option>Advanced Diagnostics</option>
+                <option>Trade Promotion Planning (TPP)</option>
                 <option>Forecast Health Review</option>
                 <option>Partnership</option>
               </select>
